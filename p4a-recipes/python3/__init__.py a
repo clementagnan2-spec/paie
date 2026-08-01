@@ -1,0 +1,12 @@
+from pythonforandroid.recipes.python3 import Python3Recipe
+
+
+class Python3RecipeOverride(Python3Recipe):
+    def get_recipe_env(self, arch, **kwargs):
+        env = super().get_recipe_env(arch, **kwargs)
+        extra_flag = ' -Wno-error=implicit-function-declaration'
+        env['CFLAGS'] = env.get('CFLAGS', '') + extra_flag
+        return env
+
+
+recipe = Python3RecipeOverride()
