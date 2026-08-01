@@ -9,6 +9,7 @@ source.include_exts = py,png,jpg,kv,atlas,json
 version = 1.0
 
 requirements = python3==3.11.9,hostpython3==3.11.9,kivy==2.3.1,requests,certifi
+p4a.local_recipes = ./p4a-recipes
 orientation = portrait
 fullscreen = 0
 
